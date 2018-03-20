@@ -7,14 +7,26 @@ public class Main
     
     public static String convertToRoman(Integer decimalNumber)
     {
-        if (decimalNumber == 4)
-            return "IV";
-        if (decimalNumber == 3)
-            return "III";
-        if (decimalNumber == 2)
-            return "II";
-        else
-            return "I";
+        HashMap<Integer,String> converter = 
+            new HashMap<Integer,String>(){{
+                put(1, "I");
+                put(4, "IV");
+                put(5, "V");
+                put(9, "IX");
+            }};
+        ArrayList<Integer> keys = new ArrayList(converter.keySet());
+        Collections.sort(keys);
+        Collections.reverse(keys);
+        String romanString = "";
+        for(Integer k : keys)
+        {
+            while (decimalNumber >= k)
+            {
+                romanString += converter.get(k);
+                decimalNumber -= k;
+            }
+        }
+        return romanString;
     }
     
     
@@ -25,6 +37,9 @@ public class Main
 	    testData.put(2, "II");
 	    testData.put(3, "III");
 	    testData.put(4, "IV");
+	    testData.put(5, "V");
+	    testData.put(8, "VIII");
+	    testData.put(9, "IX");
         for(HashMap.Entry<Integer, String> e : testData.entrySet())
         {
             testhelper.checkTest(e.getKey(), 
