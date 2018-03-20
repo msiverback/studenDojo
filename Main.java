@@ -8,6 +8,7 @@ public class Main
 		TestHelper testhelper = new TestHelper();
 		testhelper.checkTest(1, "II", "I");
 		testhelper.checkTest(1, "I", "I");
+		testhelper.checkTest(3, "II", "III");
 		testhelper.endSuite();
 	}
 }
