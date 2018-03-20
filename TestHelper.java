@@ -21,11 +21,11 @@ public class TestHelper
         numberOfTestsRun += 1;
         if (result.compareTo(expectedResult) == 0)
         {
-            System.out.println(" ## YES!, test " + numberOfTestsRun + " was successful.");
+            System.out.println(" ## YES! test " + numberOfTestsRun + " was successful.");
             numberOfSuccessfulTests += 1;
         }
         else{
-            System.out.println(" ## NOO!, test " + numberOfTestsRun + " was NOT successful, " +
+            System.out.println(" ## NOO! test " + numberOfTestsRun + " was NOT successful, " +
 			       result + " != " + expectedResult);
         }
     }
