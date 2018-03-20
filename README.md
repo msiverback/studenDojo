@@ -1,0 +1,1 @@
+Just some starter files for a simple coding dojo to be used in an online coding environment.
