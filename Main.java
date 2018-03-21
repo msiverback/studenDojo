@@ -12,7 +12,7 @@ public class Main
                  * need refactoring quite early
                  */
 		Integer input = 1;
-		String result = convertInt2Roman(1);
+		String result = convertInt2Roman(input);
 		String expectedResult = "I";
 		testhelper.checkTest(input, result, expectedResult);
 		
