@@ -1,5 +1,6 @@
 /*********************************************************************************************************
  * Just some simple helper class that can be easily copied into an online java coding site.
+ * For now it just keeps track of the number of tests run and the number of successful outcomes.
  */
 import java.util.*;
 public class TestHelper
@@ -7,7 +8,6 @@ public class TestHelper
     
     private int numberOfTestsRun;
     private int numberOfSuccessfulTests;
-    private HashMap<Integer, String> results;
     
     public TestHelper()
     {
@@ -21,11 +21,11 @@ public class TestHelper
         numberOfTestsRun += 1;
         if (result.compareTo(expectedResult) == 0)
         {
-            System.out.println(" ## YES!, test " + numberOfTestsRun + " was successful.");
+            System.out.println(" ## YES! test " + numberOfTestsRun + " was successful.");
             numberOfSuccessfulTests += 1;
         }
         else{
-            System.out.println(" ## NOO!, test " + numberOfTestsRun + " was NOT successful, " +
+            System.out.println(" ## NOO! test " + numberOfTestsRun + " was NOT successful, " +
 			       result + " != " + expectedResult);
         }
     }
